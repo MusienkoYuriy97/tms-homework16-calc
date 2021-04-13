@@ -1,6 +1,6 @@
 package by.tms.calculator.dao;
 
-import by.tms.calculator.Entity.Operation;
+import by.tms.calculator.entity.Operation;
 
 import java.util.ArrayList;
 import java.util.List;

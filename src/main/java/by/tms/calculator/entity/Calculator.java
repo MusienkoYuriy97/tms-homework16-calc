@@ -1,4 +1,4 @@
-package by.tms.calculator.Entity;
+package by.tms.calculator.entity;
 
 public class Calculator {
     public static double sum(double x, double y){

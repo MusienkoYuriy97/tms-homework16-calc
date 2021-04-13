@@ -1,7 +1,7 @@
 package by.tms.calculator.service;
 
-import by.tms.calculator.Entity.Calculator;
-import by.tms.calculator.Entity.Operation;
+import by.tms.calculator.entity.Calculator;
+import by.tms.calculator.entity.Operation;
 import by.tms.calculator.dao.DaoHistory;
 import by.tms.calculator.dao.DaoHistoryImp;
 import java.util.ArrayList;

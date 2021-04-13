@@ -1,6 +1,6 @@
 package by.tms.calculator.servlets;
 
-import by.tms.calculator.Entity.Operation;
+import by.tms.calculator.entity.Operation;
 import by.tms.calculator.service.CalculatorService;
 
 import javax.servlet.ServletException;

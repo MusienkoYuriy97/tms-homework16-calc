@@ -1,4 +1,4 @@
-package by.tms.calculator.Entity;
+package by.tms.calculator.entity;
 
 public class Operation {
     private double x;
