@@ -5,7 +5,7 @@ import by.tms.calculator.entity.Operation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DaoHistoryImp implements DaoHistory{
+public class CalcDaoImp implements CalcDao {
     private static List<Operation> operations = new ArrayList<>();
 
     public List<Operation> getOperations() {

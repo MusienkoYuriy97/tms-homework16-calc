@@ -2,16 +2,16 @@ package by.tms.calculator.service;
 
 import by.tms.calculator.entity.Calculator;
 import by.tms.calculator.entity.Operation;
-import by.tms.calculator.dao.DaoHistory;
-import by.tms.calculator.dao.DaoHistoryImp;
+import by.tms.calculator.dao.CalcDao;
+import by.tms.calculator.dao.CalcDaoImp;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculatorService {
-    DaoHistory daoHistory = new DaoHistoryImp();
+    CalcDao calcDao = new CalcDaoImp();
 
     public List<Operation> getOperation() {
-        return new ArrayList<>(daoHistory.getOperations());
+        return new ArrayList<>(calcDao.getOperations());
     }
 
     public double selectCommand(String command, double x, double y){
@@ -19,19 +19,19 @@ public class CalculatorService {
         switch (command){
             case "sum":
                 result = Calculator.sum(x,y);
-                daoHistory.saveOperation(new Operation(x,y,result,command));
+                calcDao.saveOperation(new Operation(x,y,result,command));
                 return result;
             case "sub":
                 result = Calculator.sub(x,y);
-                daoHistory.saveOperation(new Operation(x,y,result,command));
+                calcDao.saveOperation(new Operation(x,y,result,command));
                 return result;
             case "divide":
                 result = Calculator.division(x,y);
-                daoHistory.saveOperation(new Operation(x,y,result,command));
+                calcDao.saveOperation(new Operation(x,y,result,command));
                 return result;
             case "multiply":
                 result = Calculator.multiply(x,y);
-                daoHistory.saveOperation(new Operation(x,y,result,command));
+                calcDao.saveOperation(new Operation(x,y,result,command));
                 return result;
             default:
                 return 0;

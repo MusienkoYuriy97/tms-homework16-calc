@@ -4,7 +4,7 @@ import by.tms.calculator.entity.Operation;
 
 import java.util.List;
 
-public interface DaoHistory {
+public interface CalcDao {
     void saveOperation(Operation operation);
     List<Operation> getOperations();
 }

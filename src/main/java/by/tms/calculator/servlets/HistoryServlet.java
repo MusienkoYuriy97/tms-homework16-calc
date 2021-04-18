@@ -12,10 +12,11 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/history")
 public class HistoryServlet extends HttpServlet {
+    CalculatorService calculatorService = new CalculatorService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        CalculatorService calculatorService = new CalculatorService();
+
         for (Operation operation : calculatorService.getOperation()) {
             resp.getWriter().println(operation);
         }
